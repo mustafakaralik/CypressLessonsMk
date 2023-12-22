@@ -23,3 +23,14 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+//import cypress from 'cypress'; this line created Automatically and gives error 
+import 'cypress-file-upload';
+
+Cypress.Commands.add('textExists', (text) => {
+    cy.contains(text).should('exist');
+})
+
+/*
+textExist is our utility command or function, pass parameter which is text
+cy.textExist(text);
+*/

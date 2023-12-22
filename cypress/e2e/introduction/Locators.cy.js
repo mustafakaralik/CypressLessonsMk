@@ -1,4 +1,3 @@
-    
     describe('Find  or Get Elemenets by using Different Locators', () => {
     beforeEach('Navigate to Login Page',() =>{
        cy.clearCookies();

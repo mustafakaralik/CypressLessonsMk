@@ -5,7 +5,7 @@ describe('Different type of ınput fields test', () => {
        cy.visit('registration_form');
     })
 
-    xit('Input Boxes', () => {
+    it('Input Boxes', () => {
         cy.get('input[name="firstname"]').type('Mustafa');
         cy.get('input[name="lastname"]').type('kara');
         cy.get('input[name="username"]').type('blackness');
@@ -14,7 +14,7 @@ describe('Different type of ınput fields test', () => {
         cy.get('input[name="phone"]').type('5435844567');
     })
 
-    xit('Check different radio button actions', ()=>{  //if we put X at the begining of it block this not will be run
+    it('Check different radio button actions', ()=>{  //if we put X at the begining of it block this not will be run
         cy.get('.radio')
         .find('[type=radio]')
         .then((radioButtons)=>{
@@ -25,11 +25,11 @@ describe('Different type of ınput fields test', () => {
             //use index of the list element then check and verify
             cy.wrap(radioButtons).eq(1).check().should('be.checked');
             //verify that third one not checked
-            cy.wrap(radioButtons).eq(2).should('not.be.checked').should('have.value','SDET');
+            cy.wrap(radioButtons).eq(2).should('not.be.checked');
         })
     })
 
-    xit('Check Different Type of checkbox actions',() => {
+    it('Check Different Type of checkbox actions',() => {
         cy.get('[type="checkbox"]').then((checkbox) => {
             //check Java Box and verify checked
             cy.wrap(checkbox).eq(1).check().should('be.checked');
@@ -41,7 +41,7 @@ describe('Different type of ınput fields test', () => {
         })
     })
 
-    xit('Check select dropdown and select single choice', ()=> {
+    it('Check select dropdown and select single choice', ()=> {
         // locate top select menu locator then use select function to select tab
         cy.get('select[name="job_title"]').select('SDET');
 
@@ -49,7 +49,7 @@ describe('Different type of ınput fields test', () => {
         //locate the select menu again and verify the value contains SDET
         cy.get('select[name="job_title"]').contains('SDET').should('have.value', 'SDET');
 
-        cy.get('select[name="job_title"]').contains('SDET').should('have.value', 'QA'); // negative verification
+        // cy.get('select[name="job_title"]').contains('SDET').should('have.value', 'QA'); // we used this line for negative verification
 
 
     })

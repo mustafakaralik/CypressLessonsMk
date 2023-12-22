@@ -1,0 +1,18 @@
+{
+    "user1" : {
+    "firstName"  : "Mustafa",
+    "lastName"  : "KARA",
+    "age":"40",
+    "userEmail": "mustafakara@gmail.com",
+    "salary": "70000",
+    "department" : "legal"
+
+    },
+
+    "user2" : {
+
+    },
+    "user3" : {
+
+    }
+}

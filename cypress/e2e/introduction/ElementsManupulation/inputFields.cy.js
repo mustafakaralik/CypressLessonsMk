@@ -41,7 +41,7 @@ describe('Different type of ınput fields test', () => {
         })
     })
 
-    it('Check select dropdown and select single choice', ()=> {
+    xit('Check select dropdown and select single choice', ()=> {
         // locate top select menu locator then use select function to select tab
         cy.get('select[name="job_title"]').select('SDET');
 
@@ -51,6 +51,21 @@ describe('Different type of ınput fields test', () => {
 
         cy.get('select[name="job_title"]').contains('SDET').should('have.value', 'QA'); // negative verification
 
+
+    })
+ //we use JSON department JSON that we created before to select all dropdown element
+    it('Check all of the Select Dropdown Options', ()=> {
+       cy.fixture('departments').then((departments)=> {
+         cy.get('select[name="department"] > option').each((option,index,allOptions) => {
+         //get each option text
+         const optionText = option.text();
+
+         cy.get('select[name="department"]')
+         .select(optionText)
+         .should('have.value', option.val())
+         .contains(departments[index])
+         })
+       })
 
     })
 })

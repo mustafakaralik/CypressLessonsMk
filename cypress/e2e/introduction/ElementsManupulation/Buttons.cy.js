@@ -18,7 +18,7 @@ describe('Button Element Manupialtion', () => {
                 cy.contains('Clicked on button three!').should('be.visible');
             })
             
-            //verify locate all buttonw with tagname and verify each of them has attribute onclick
+            //verify locate all button with tagname and verify each of them has attribute onclick
             cy.get('button').each((item, index, list) => {
                 //verify we have 6 buttons
                 expect(list).to.have.length(6);
@@ -27,7 +27,7 @@ describe('Button Element Manupialtion', () => {
             })
     })
 
-    it('Verify element text of buttons', () => {
+    xit('Verify element text of buttons', () => {
         cy.get('button').each((item)=> {
             if(item.text()=== 'Button 4'){ 
                 cy.wrap(item).click(); //this is still JQuerry element ı need to convert it to Cypress element

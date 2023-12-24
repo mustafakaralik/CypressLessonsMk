@@ -5,7 +5,7 @@ describe('Testing Alerts in Cypress Environment ', {baseUrl:"https://demoqa.com/
         cy.visit('/alerts');
 
     })
-    xit ('Check Alert confirmation ',() => {
+    it ('Check Alert confirmation ',() => {
         /*
         * Browser Commands : window:alert, window: confirmation, window: on etc..
         

@@ -7,7 +7,7 @@ describe('Navigate to different base URL to test Web tables',{baseUrl:"https://d
 
    
 
-    xit('Chech finding and editing a record', () =>{
+    it('Chech finding and editing a record', () =>{
         cy.get('.rt-tbody')
         .contains('.rt-tr-group','Alden')
         .then((row)=> {
@@ -23,7 +23,7 @@ describe('Navigate to different base URL to test Web tables',{baseUrl:"https://d
         })
     })
 
-    xit ('Check finding and deletind a record',() => {
+    it ('Check finding and deletind a record',() => {
         cy.get('.rt-tbody')
         .contains('.rt-tr-group','Alden')
         .then((row)=> {

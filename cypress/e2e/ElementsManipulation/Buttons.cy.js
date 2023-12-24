@@ -27,7 +27,7 @@ describe('Button Element Manupialtion', () => {
             })
     })
 
-    xit('Verify element text of buttons', () => {
+    it('Verify element text of buttons', () => {
         cy.get('button').each((item)=> {
             if(item.text()=== 'Button 4'){ 
                 cy.wrap(item).click(); //this is still JQuerry element ı need to convert it to Cypress element
